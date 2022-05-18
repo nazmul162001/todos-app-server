@@ -19,6 +19,10 @@ mongoose.connect(process.env.MONGODB_URI, () => {
 app.use(bodyparser.json());
 app.use('/api/user', route);
 
+app.get('/', (req, res)=> {
+  res.send('My todos app running')
+})
+
 app.listen(port, () => {
   console.log('server connected');
 });
