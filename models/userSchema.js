@@ -3,10 +3,10 @@ import mongoose from 'mongoose';
 // create api
 
 const userSchema = mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
+  // title: {
+  //   type: String,
+  //   required: true,
+  // },
   todoTask: {
     type: String,
     required: true,
