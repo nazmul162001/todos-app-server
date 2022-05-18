@@ -33,4 +33,16 @@ route.delete('/:id', async (req, res) => {
   }
 });
 
+
+
+// delete api / Delete
+route.put('/:id', async (req, res) => {
+  try {
+    const completedTask = await User.findByIdAndUpdate(req.params.id, req.body);
+    res.send(completedTask);
+  } catch (error) {
+    res.send({ error: error.message });
+  }
+});
+
 export default route;
